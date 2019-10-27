@@ -12,10 +12,10 @@ import Loading from './components/Loading'
 
 class App extends React.Component {
   state = {
-    theme: 'light',
+    theme: 'dark',
     toggleTheme: () => {
       this.setState(({ theme }) => ({
-        theme: theme === 'light' ? 'dark' : 'light'
+        theme: theme === 'dark' ? 'light' : 'dark'
       }))
     }
   }

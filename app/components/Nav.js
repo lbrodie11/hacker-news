@@ -11,6 +11,7 @@ export default function Nav() {
     <ThemeConsumer>
       {({ theme, toggleTheme }) => (
         <nav className='row space-between'>
+          <p className='logo'>Hacker News</p>
           <ul className='row nav'>
             <li>
               <NavLink exact to='/' activeStyle={activeStyle} className='nav-link'>Top</NavLink>
@@ -27,7 +28,7 @@ export default function Nav() {
           className='btn-clear'
           onClick={toggleTheme}
           >
-            {theme === 'light' ? '🔦' : '💡'}
+            {theme === 'dark' ? '💡' : '🔦'}
           </button>
         </nav>
       )}
