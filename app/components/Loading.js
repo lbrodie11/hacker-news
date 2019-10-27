@@ -8,7 +8,7 @@ const styles = {
     left: '0',
     right: '0',
     marginTop: '20px',
-    textAlign: 'center',
+    textAlign: 'center'
   }
 }
 
@@ -19,11 +19,11 @@ export default class Loading extends React.Component {
 
     this.interval = window.setInterval(() => {
       this.state.content === text + '...'
-        ? this.setState({ content: text })
-        : this.setState(({ content }) => ({ content: content + '.' }))
+      ? this.setState({ content: text })
+      : this.setState(({ content }) => ({ content: content + '.' }))
     }, speed)
   }
-  componentWillUnmount () {
+  componentWillMount () {
     window.clearInterval(this.interval)
   }
   render() {
@@ -37,10 +37,5 @@ export default class Loading extends React.Component {
 
 Loading.propTypes = {
   text: PropTypes.string.isRequired,
-  speed: PropTypes.number.isRequired,
-}
-
-Loading.defaultProps = {
-  text: 'Loading',
-  speed: 300
+  speed: PropTypes.number.isRequired
 }
