@@ -5,7 +5,7 @@ html, body, #app {
 }
 
 body {
-  font-family: 'Wallpoet', cursive,Helvetica Neue,sans-serif;
+  font-family: Helvetica Neue,sans-serif;
 }
 
 ul {
@@ -28,6 +28,16 @@ li {
   min-height: 100%;
 }
 
+.dark a {
+  color: rgb(203, 203, 203);
+}
+
+.link {
+  color: rgb(187, 46, 31);
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .btn-clear {
   border: none;
   background: transparent;
@@ -42,6 +52,7 @@ li {
   font-weight: bold;
   text-decoration: none;
   color: inherit;
+  font-family: 'Wallpoet', cursive;
 }
 
 .row {
@@ -60,5 +71,29 @@ li {
 }
 
 .logo {
-  font-size: 35px;
+  font-size: 40px;
+  font-family: 'Wallpoet', cursive;
+}
+
+.meta-info-light {
+  margin-top: 5px;
+  color: gray;
+}
+
+.meta-info-light a {
+  color: black;
+}
+
+.meta-info-light span {
+  margin: 10px 0;
+  margin-right: 6px;
+}
+
+.meta-info-dark {
+  margin-top: 5px;
+  color: gray;
+}
+
+.meta-info-dark a {
+  color: #bebebe;
 }

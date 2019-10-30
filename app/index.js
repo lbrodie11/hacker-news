@@ -42,6 +42,9 @@ class App extends React.Component {
                     path='/best'
                     render={() => <Posts type='best' />}
                   />
+                  <Route path='/post' component={Post} />
+                  <Route path='/user' component={User} />
+                  <Route render={() => <h1>404</h1>} />
                 </Switch>
               </React.Suspense>
             </div>
