@@ -39,3 +39,8 @@ Loading.propTypes = {
   text: PropTypes.string.isRequired,
   speed: PropTypes.number.isRequired
 }
+
+Loading.defaultProps = {
+  text: 'Loading',
+  speed: 300
+}

@@ -6,9 +6,9 @@ import Nav from './components/Nav'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Loading from './components/Loading'
 
-// const TopStories = React.lazy(() => import('./components/TopStories'))
-// const NewStories = React.lazy(() => import('./components/NewStories'))
-// const BestStories = React.lazy(() => import('./components/BestStories'))
+const Posts = React.lazy(() => import('./components/Posts'))
+const Post = React.lazy(() => import('./components/Post'))
+const User = React.lazy(() => import('./components/User'))
 
 class App extends React.Component {
   state = {
@@ -26,8 +26,23 @@ class App extends React.Component {
           <div className={this.state.theme}>
             <div className='container'>
               <Nav />
-              <React.Suspense fallback={<Loading />}>
 
+              <React.Suspense fallback={<Loading />}>
+                <Switch>
+                  <Route 
+                    exact
+                    path='/'
+                    render={() => <Posts type='top' />}
+                  />
+                  <Route
+                    path='/new'
+                    render={() => <Posts type='new' />}
+                  />
+                  <Route
+                    path='/best'
+                    render={() => <Posts type='best' />}
+                  />
+                </Switch>
               </React.Suspense>
             </div>
           </div>
