@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PostMetaInfo from './PostMetainfo'
+import PostMetaInfo from './PostMetaInfo'
 import Title from './Title'
 
 export default function PostsList({ posts }) {
